@@ -1,0 +1,100 @@
+﻿@model IEnumerable<ComedyClub.Core.Models.Show>
+@{
+    ViewBag.Title = "Mine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Upcoming Shows</h2>
+<ul class="shows vert-offset4">
+    @foreach (var show in Model)
+    {
+        <li>
+            <div class="date">
+                <div class="month">
+                    @show.DateTime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @show.DateTime.ToString("d ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="comedian">
+                    @show.Venue
+                </span>
+                <span class="genre">
+                    @show.Genre.Name
+                </span>
+                <div class="actions">
+                    <a href="@Url.Action("Edit", "Shows", new {id = show.Id})">
+                        Edit
+                    </a>
+                    <a href="#" class="js-cancel-show" data-show-id="@show.Id">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+
+@* TODO: refactor, put in seperate script file  *@
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(".js-cancel-show").click(function (e) {
+                var link = $(e.target);
+
+                $.ajax({
+                    url: "/api/shows/" + link.attr("data-show-id"),
+                    method: "DELETE"
+                })
+                .done(function () {
+                    link.parents("li").fadeOut(function () {
+                        $(this).remove();
+                    });
+                })
+                .fail(function () {
+                    alert("Something failed!");
+                });
+
+                
+            });
+        });
+    </script>
+}
+
+@* TODO: add bootbox, data[option] is not a function in $fn.modal error
+    bootbox.dialog({
+        message: "Are you sure you want to cancel this show?",
+        title: "Confirm",
+        buttons: {
+            no: {
+                label: "No",
+                className: "btn-default",
+                callback: function () {
+                    bootbox.hideAll();
+                }
+            },
+            yes: {
+                label: "Yes",
+                className: "btn-danger",
+                callback: function () {
+                    $.ajax({
+                        url: "/api/shows/" + link.attr("data-show-id"),
+                        method: "DELETE"
+                    })
+                    .done(function () {
+                        link.parents("li").fadeOut(function () {
+                            $(this).remove();
+                        });
+                    })
+                    .fail(function () {
+                        alert("Something failed!");
+                    });
+                }
+            }
+        }
+    });
+*@

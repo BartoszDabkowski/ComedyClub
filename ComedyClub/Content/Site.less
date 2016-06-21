@@ -1,0 +1,269 @@
+﻿// Color variables (appears count calculates by raw css)
+@white: #ffffff; // Appears 7 times
+@yellow-orange: #ffc510; // Appears 6 times
+@yellow: #f6db35; // Appears 6 times
+@light-red: #ee5454; // Appears 4 times
+@blue1: #4a8eea; // Appears 4 times
+@blue2: #4c94f6; // Appears 4 times
+@blue3: #357ebd; // Appears 2 times
+@light-black: #333333; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width0: 280px; // Appears 3 times
+
+
+body {
+	background-color: @white;
+	color: @light-black;
+	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	line-height: 1.428571429;
+	padding-bottom: 20px;
+	padding-top: 90px;
+}
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.dl-horizontal {
+	dt {
+		white-space: normal;
+	}
+}
+input {
+	max-width: @width0;
+}
+select {
+	max-width: @width0;
+}
+textarea {
+	max-width: @width0;
+}
+span.field-validation-error {
+	color: red;
+	font-weight: bold;
+}
+.input-validation-error {
+	border-color: red;
+}
+.popover {
+	-ms-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.navbar-inverse {
+	background-color: @blue2;
+	border-color: @blue2;
+	.navbar-brand {
+		color: @yellow;
+		font-family: Bangers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	.navbar-nav>li>a {
+		background-color: transparent;
+		background-color: transparent;
+		color: @yellow;
+		color: @yellow;
+		color: @yellow;
+		font-family: Bangers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	.navbar-nav>.open>a {
+		background-color: @blue1;
+		color: @yellow-orange;
+		&:hover {
+			background-color: @blue1;
+			color: @yellow-orange;
+		}
+		&:focus {
+			background-color: @blue1;
+			color: @yellow-orange;
+		}
+	}
+	.navbar-nav>.dropdown>a {
+		.caret {
+			border-bottom-color: @yellow;
+			border-top-color: @yellow;
+		}
+	}
+	.notifications>a>i.glyphicon-globe {
+		color: @white;
+		&:hover {
+			color: #ededed;
+		}
+	}
+	.notifications {
+		position: relative;
+		.badge {
+			background-color: @light-red;
+			position: absolute;
+			right: 3px;
+			top: 8px;
+		}
+	}
+}
+.navbar-inverse 
+.navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus, 
+.navbar-inverse .navbar-nav>li>a:hover, 
+.navbar-inverse .navbar-nav>li>a:focus  {
+	background-color: transparent;
+	color: @yellow-orange;
+}
+.navbar-inverse 
+.navbar-nav>.open>a .caret, 
+.navbar-inverse .navbar-nav>.open>a:hover .caret, 
+.navbar-inverse .navbar-nav>.open>a:focus .caret, 
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret  {
+	border-bottom-color: @yellow-orange;
+	border-top-color: @yellow-orange;
+}
+.navbar-brand {
+	font-size: 24px;
+}
+.dropdown-menu>li>a {
+	&:hover {
+		background-color: @light-red;
+		color: @white;
+		text-decoration: none;
+	}
+	&:focus {
+		background-color: @light-red;
+		color: @white;
+		text-decoration: none;
+	}
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
+	font-family: Bangers, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.1;
+}
+.form-group {
+	margin-bottom: 20px;
+}
+.form-control {
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	font-size: 17px;
+	height: 44px;
+	&:focus {
+		-webkit-box-shadow: none;
+		border-color: @blue2;
+		box-shadow: none;
+	}
+}
+.btn {
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+}
+.btn-primary {
+	background-color: @blue2;
+	border-color: @blue3;
+	color: @white;
+	&:hover {
+		background-color: @blue1;
+		border-color: @blue3;
+		color: @white;
+	}
+}
+.dropdown-menu {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.shows {
+	list-style: none;
+}
+.shows>li {
+	margin-bottom: 30px;
+	position: relative;
+	.details {
+		.comedian {
+			display: block;
+			font-weight: bold;
+		}
+		.genre {
+			font-size: 15px;
+		}
+	}
+	.actions {
+		display: none;
+		font-size: 12px;
+	}
+	&:hover {
+		.actions {
+			display: block;
+		}
+	}
+}
+.shows>li>.date {
+	-ms-border-radius: 8px;
+	background-color: @light-red;
+	border-radius: 8px;
+	color: @white;
+	text-align: center;
+	width: 60px;
+	.month {
+		font-size: 14px;
+		font-weight: bold;
+		padding: 2px 6px;
+		text-transform: uppercase;
+	}
+	.day {
+		background: #f7f7f7;
+		color: @light-black;
+		font-size: 20px;
+		padding: 6px 12px;
+	}
+}
+.shows>li>.details {
+	left: 70px;
+	position: absolute;
+	top: 0;
+}
+.vert-offset {
+	margin-top: 2px;
+}
+.vert-offset1 {
+	margin-top: 5px;
+}
+.vert-offset2 {
+	margin-top: 10px;
+}
+.vert-offset3 {
+	margin-top: 20px;
+}
+.vert-offset4 {
+	margin-top: 40px;
+}
+.vert-offset5 {
+	margin-top: 80px;
+}
+
+.popover-notifications{
+    .popover-content{
+        padding: 0;
+    }
+    ul.notifications{
+        list-style: none;
+        padding-left: 0;
+
+        > li{
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        > li:last-child{
+            border-bottom: none;
+        }
+        .highlight{
+            font-weight: bold;
+        }
+    }
+}
+
+#searchShows {
+    width:300px;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}

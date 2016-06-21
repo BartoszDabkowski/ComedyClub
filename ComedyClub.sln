@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComedyClub", "ComedyClub\ComedyClub.csproj", "{0A02F7D8-445D-4E6E-B74D-E58921CBC416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComedyClub.Tests", "ComedyClub.Tests\ComedyClub.Tests.csproj", "{6C9EE21E-CC38-464E-8A5A-B8852F826A7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A02F7D8-445D-4E6E-B74D-E58921CBC416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A02F7D8-445D-4E6E-B74D-E58921CBC416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A02F7D8-445D-4E6E-B74D-E58921CBC416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A02F7D8-445D-4E6E-B74D-E58921CBC416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C9EE21E-CC38-464E-8A5A-B8852F826A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9EE21E-CC38-464E-8A5A-B8852F826A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9EE21E-CC38-464E-8A5A-B8852F826A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9EE21E-CC38-464E-8A5A-B8852F826A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://bartoszdabkowskiportfolio.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ComedyClub\\ComedyClub.csproj
+		SccProjectName1 = ComedyClub
+		SccLocalPath1 = ComedyClub
+		SccProjectUniqueName2 = ComedyClub.Tests\\ComedyClub.Tests.csproj
+		SccProjectName2 = ComedyClub.Tests
+		SccLocalPath2 = ComedyClub.Tests
+	EndGlobalSection
+EndGlobal

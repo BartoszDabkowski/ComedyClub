@@ -1,0 +1,66 @@
+﻿@using Microsoft.AspNet.Identity
+@model ComedyClub.Core.ViewModels.ShowsViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>@Model.Heading</h1>
+@using (Html.BeginForm("Search", "Shows"))
+{
+    <div class="form-group">
+        <div id="searchShows" class="input-group">
+            @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control" })
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-search"></i>
+            </span>
+        </div>
+    </div>
+}
+<ul id="shows" class="shows vert-offset4">
+    @foreach (var show in Model.UpcomingShows)
+    {
+        <li>
+            <div class="date">
+                <div class="month">
+                    @show.DateTime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @show.DateTime.ToString("d ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="comedian">
+                    <a href="@Url.Action("Details", "Shows", new {id = show.Id})">@show.Comedian.Name</a>
+
+                    @if (show.IsCanceled)
+                    {
+                        <span class="label label-warning">Canceled</span>
+                    }
+
+                </span>
+                <span class="genre">
+                    @show.Genre.Name
+                </span>
+                @if (Model.IsAuthenticated && !show.IsCanceled && show.ComedianId != User.Identity.GetUserId())
+                {
+                    <button
+                        data-newShow-id="@show.Id"
+                        class="btn 
+                            @(Model.Attendances.Contains(show.Id) ? "btn-info" : "btn-default")
+                            btn-sm pull-right js-toggle-attendance">
+                        Going @(!Model.Attendances.Contains(show.Id) ? "?" : "")
+                    </button>
+                }
+            </div>
+        </li>
+    }
+</ul>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            ShowsController.init("#shows");
+        });
+    </script>
+}
