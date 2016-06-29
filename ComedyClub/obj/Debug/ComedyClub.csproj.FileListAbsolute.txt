@@ -222,3 +222,4 @@ C:\Users\BartoszDabkowski\Documents\ComedyClub\ComedyClub\obj\Debug\ComedyClub.M
 C:\Users\BartoszDabkowski\Documents\ComedyClub\ComedyClub\obj\Debug\ComedyClub.csproj.GenerateResource.Cache
 C:\Users\BartoszDabkowski\Documents\ComedyClub\ComedyClub\obj\Debug\ComedyClub.dll
 C:\Users\BartoszDabkowski\Documents\ComedyClub\ComedyClub\obj\Debug\ComedyClub.pdb
+C:\Users\BartoszDabkowski\Documents\ComedyClub\ComedyClub\obj\Debug\ComedyClub.Migrations.SeedComedyClub.resources

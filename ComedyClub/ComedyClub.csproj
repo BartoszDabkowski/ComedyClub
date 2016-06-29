@@ -331,6 +331,10 @@
     <Compile Include="Persistence\Migrations\201606120556510_AddNotifications.Designer.cs">
       <DependentUpon>201606120556510_AddNotifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Persistence\Migrations\201606290430375_SeedComedyClub.cs" />
+    <Compile Include="Persistence\Migrations\201606290430375_SeedComedyClub.Designer.cs">
+      <DependentUpon>201606290430375_SeedComedyClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="Persistence\Repositories\ApplicationUserRepository.cs" />
@@ -468,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Persistence\Migrations\201606120556510_AddNotifications.resx">
       <DependentUpon>201606120556510_AddNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201606290430375_SeedComedyClub.resx">
+      <DependentUpon>201606290430375_SeedComedyClub.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

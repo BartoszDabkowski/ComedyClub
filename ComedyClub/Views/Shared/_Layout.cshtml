@@ -70,6 +70,9 @@
                     <li><span class="highlight"> <%= notification.show.comedian.name %> </span> has changed the <% changes.join(' and ') %> of the show from <%= originalValues.join('/') %> to <%= newValues.join('/') %> </li>
             <%
             }
+            else if(notification.notificationType == 3) { %>
+                <li><span class="highlight"><%= notification.show.comedian.name %></span> has an upcoming show at <%= notification.show.venue %> at <%= moment(notification.show.dateTime).format("D MMM HH:mm") %></li>
+            <%}
         })
         %>
     </ul>
@@ -79,6 +82,7 @@
             $.getJSON("/api/notifications", function (notifications) {
                 if (notifications.length === 0)
                     return;
+
                 console.log(notifications[0].show.comedian.name);
 
                 $(".js-notifications-count")
